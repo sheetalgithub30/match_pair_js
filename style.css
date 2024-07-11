@@ -1,37 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   line-height: 2.3;
+   background: linear-gradient(rgb(32, 99, 144),rgb(179, 196, 200),rgb(133, 114, 167));
+}
+#container{
+    width: 35rem;
+}
+
 #cards{
     display: flex;
     flex-wrap: wrap;
-    background-color: beige;
-    /* margin: auto; */
     justify-content: center;
     align-items: center;
 }
 
-.box{
-    background-color: aqua;
-    width: 5rem;
-    height: 5rem;
-    margin: 1rem;
-
+.box,.active-box{
+    background-color: rgb(41, 156, 156);
+    width: 6rem;
+    height: 6rem;
+    margin: 0.5rem 1rem;
+    border-radius: 20px;
+   filter: drop-shadow(4px 4px 4px rgb(23, 23, 23));
 }
 .active-box{
-    background-color: rgb(73, 234, 103);
-    width: 5rem;
-    height: 5rem;
-    margin: 1rem;
+    background-color: rgb(237, 145, 246);
     display: flex;
     justify-content: center;
     align-items: center;
-     animation: flip 0.5s  linear;
+    filter: drop-shadow(8px 8px 8px rgb(234, 0, 27));
+    animation: flip 0.5s  linear;
 }
 .emoji{
     font-size: 3rem;
 }
+#at{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#restart{
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 17px;
+    background-color: rgb(17, 255, 0);
+    box-shadow: 2px 3px 5px black;
+}
 
 @keyframes flip {
     0%{
-        transform: rotatey(180deg);
+        transform: rotatey(90deg);
     }
 }
 
+
+
+@media screen and (max-width: 650px)  {
+    #container{
+        width: 100vw;
+    }
+}
 

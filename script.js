@@ -92,6 +92,23 @@ var second = -1;
 var score = 0;
 var attempt = 0;
 
+
+restart.addEventListener("click",()=>{
+    console.log("res")
+    first = -1; 
+     second = -1; 
+     score=0;
+     document.getElementById("score").innerText = score;
+
+    attempt = 0;
+    data.forEach((ele)=>{
+        ele["show"] = false;
+    })
+    displayData();
+    shuffle();
+})
+
+
 function displayData(){
     cards.innerHTML="";
     data.forEach((data,index)=>{
@@ -102,8 +119,7 @@ function displayData(){
             emoji.classList.add("emoji");
             emoji.innerHTML = data["emoji"];
             div.append(emoji);
-            cards.append(div)
-
+            cards.append(div);
         }
         else{
             {
@@ -133,8 +149,7 @@ function handleClick(index)
         data[index]["show"] = true;
         displayData();
         second = index
-
-        setTimeout(checkImages, 1000 )
+        setTimeout(checkImages, 1500 )
       
     }
 
@@ -147,7 +162,6 @@ function checkImages()
     {
         first = -1;
         second = -1;
-
         score += 10;
         document.getElementById("score").innerText = score
 
