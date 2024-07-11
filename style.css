@@ -71,9 +71,20 @@ body{
 
 
 
-@media screen and (max-width: 650px)  {
+@media screen and (max-width: 540px)  {
     #container{
         width: 100vw;
     }
+
+}
+@media screen and (max-width: 515px)  {
+    #container{
+        width: 90vw;
+    }
+  .box,.active-box{
+    width: 4rem;
+    height: 4rem;
+  }
+
 }
 
