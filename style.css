@@ -1,0 +1,37 @@
+#cards{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: beige;
+    /* margin: auto; */
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    background-color: aqua;
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem;
+
+}
+.active-box{
+    background-color: rgb(73, 234, 103);
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     animation: flip 0.5s  linear;
+}
+.emoji{
+    font-size: 3rem;
+}
+
+@keyframes flip {
+    0%{
+        transform: rotatey(180deg);
+    }
+}
+
+
