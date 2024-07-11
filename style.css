@@ -43,6 +43,8 @@ body{
     justify-content: center;
     align-items: center;
     filter: drop-shadow(8px 8px 8px rgb(234, 0, 27));
+}
+.flip{
     animation: flip 0.5s  linear;
 }
 .emoji{

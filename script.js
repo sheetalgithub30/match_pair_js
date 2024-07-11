@@ -7,81 +7,112 @@ var data =[
     emoji:"🚗",
     name:"car",
     show:false,
+    new:false
   },
   {
     emoji:"🐶",
     name:"dog",
     show:false,
+    new:false
+
   },
   {
     emoji:"🐵",
     name:"monkey",
     show:false,
+    new:false
+
   },
   {
     emoji:"🍭",
     name:"lolly",
     show:false,
+    new:false
+
   },
   {
     emoji:"🪔",
     name:"diya",
     show:false,
+    new:false
+
   },
   {
     emoji:"🚗",
     name:"car",
     show:false,
+    new:false
+
   },
   {
     emoji:"🪔",
     name:"diya",
     show:false,
+    new:false
+
   },
   {
     emoji:"🍭",
     name:"lolly",
     show:false,
+    new:false
+
   },
   {
     emoji:"🦀",
     name:"lobster",
     show:false,
+    new:false
+
   },
   {
     emoji:"🐶",
     name:"dog",
     show:false,
+    new:false
+
   },
   {
     emoji:"🦀",
     name:"lobster",
     show:false,
+    new:false
+
   },
   {
     emoji:"🐵",
     name:"monkey",
     show:false,
+    new:false
+
   },
   {
     emoji:"⭐",
     name:"star",
     show:false,
+    new:false
+
   },
   {
     emoji:"🍔",
     name:"Burger",
     show:false,
+    new:false
+
   },
   {
     emoji:"⭐",
     name:"star",
     show:false,
+    new:false
+
   },
   {
     emoji:"🍔",
     name:"Burger",
     show:false,
+    new:false
+
   },
 
 ]
@@ -114,6 +145,9 @@ function displayData(){
     data.forEach((data,index)=>{
         if(data["show"] == true){
             let div = document.createElement("div");
+            if(data["new"] == true){
+              div.classList.add("flip");
+            }
             div.classList.add("active-box");
             let emoji = document.createElement("h1");
             emoji.classList.add("emoji");
@@ -137,15 +171,22 @@ function displayData(){
 
 function handleClick(index)
 {
+    data.forEach((e)=>{
+      e.new = false;
+    })
+
     attempt++;
     if(first == -1)
     {
+        data[index]["new"] = true;
         data[index]["show"] = true;
         displayData();
         first = index
     }
     else if (second == -1)
     {
+      data[index]["new"] = true;
+
         data[index]["show"] = true;
         displayData();
         second = index
