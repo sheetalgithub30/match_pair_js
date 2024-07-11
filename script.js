@@ -190,7 +190,7 @@ function handleClick(index)
         data[index]["show"] = true;
         displayData();
         second = index
-        setTimeout(checkImages, 1500 )
+        setTimeout(checkImages, 1000 )
       
     }
 
